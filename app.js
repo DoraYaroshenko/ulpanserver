@@ -1,7 +1,7 @@
 const express = require("express");
 const http = require("http");
 const path = require("path");
-const cors  = require("cors");
+// const cors  = require("cors");
 
 const { routesInit } = require("./routes/configRoutes");
 const { config } = require("./config/secret");
