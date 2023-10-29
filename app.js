@@ -16,10 +16,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 routesInit(app);
 
-app.use(cors({
-    origin:config.projectUrl,
-    credentials:true
-}));
+// app.use(cors({
+//     origin:config.projectUrl,
+//     credentials:true
+// }));
 
 const server = http.createServer(app);
 let port = process.env.PORT || 3001;
