@@ -1,7 +1,7 @@
 const express = require("express");
 const http = require("http");
 const path = require("path");
-// const cors  = require("cors");
+const cors  = require("cors");
 
 const { routesInit } = require("./routes/configRoutes");
 const { config } = require("./config/secret");
@@ -16,10 +16,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 routesInit(app);
 
-// app.use(cors({
-//     origin:config.projectUrl,
-//     credentials:true
-// }));
+app.use(cors({
+    origin:config.projectUrl,
+    credentials:true
+}));
 
 const server = http.createServer(app);
 let port = process.env.PORT || 3001;
